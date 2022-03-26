@@ -10,9 +10,13 @@ Proyecto de Gráficas Computacionales.
 
 ## Descripción de proyecto
 El objetivo del proyecto es desarrollar un visualizador de música con formato de ambientación generada
-con formas reactivas tridimensionales en WebGL.
+con formas reactivas tridimensionales en WebGL. Unos ejemplos de formas reactivas:
 
-El usuario puede subir archivos de audio **.mp4**, **.wav** para ser procesados y escuchados mientras la aplicación
+* Bolitas rebotando en un espacio delimitado.
+* Persona/animal bailando al ritmo de la música.
+* Soundwave tridimensional reflejando el waveform del audio.
+
+El usuario puede subir archivos de tipo **audio/mpeg**, **audio/wav** para ser procesados y escuchados mientras la aplicación
 genera visualizaciones gráficas reactivas basadas en las secuencias de frecuencias generables con 
 **STFT (Short-Time Fourier Transform)**.
 
