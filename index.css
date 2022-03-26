@@ -1,8 +1,52 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: "Roboto Light", sans-serif;
 }
 
 #visualizer {
-    width: 80%;
+    width: 100%;
+    height: 90vh;
+}
+
+#audio-player-console {
+    display: flex;
+    height: 7vh;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+#audio-file-input {
+    display: none;
+}
+
+#audio-file-input-label:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+#audio-file-input-label {
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+    background: linear-gradient(
+            -45deg,
+            rgba(255, 0, 0, 1) 0%,
+            rgba(255, 154, 0, 1) 10%,
+            rgba(208, 222, 33, 1) 20%,
+            rgba(79, 220, 74, 1) 30%,
+            rgba(63, 218, 216, 1) 40%,
+            rgba(47, 201, 226, 1) 50%,
+            rgba(28, 127, 238, 1) 60%,
+            rgba(95, 21, 242, 1) 70%,
+            rgba(186, 12, 248, 1) 80%,
+            rgba(251, 7, 217, 1) 90%,
+            rgba(255, 0, 0, 1) 100%
+    );
+    transition: transform 0.1s;
+    padding: 17px;
 }

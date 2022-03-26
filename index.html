@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>WebGL Music Visualizer</title>
-    <script src="index.js" defer></script>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <canvas id="visualizer"></canvas>
-</body>
+    <head>
+        <title>WebGL Music Visualizer</title>
+        <script src="index.js" defer></script>
+        <script src="listeners.js" defer></script>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="root">
+            <canvas id="visualizer"></canvas>
+            <div id="audio-player-console">
+                <audio id="audio-player" controls></audio>
+                <label id="audio-file-input-label" for="audio-file-input">Sube un archivo MPEG o WAV</label>
+                <input id="audio-file-input" name="audio-file-input" type="file" accept="audio/mpeg, audio/wav"/>
+            </div>
+        </div>
+    </body>
 </html>
