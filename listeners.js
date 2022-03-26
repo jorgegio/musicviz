@@ -22,9 +22,12 @@ document.getElementById("audio-player").addEventListener("play", function () {
     const bufferSize = analyzer.frequencyBinCount;
     const buffer = new Float32Array(bufferSize);
     analyzer.getFloatTimeDomainData(buffer);
-    console.log(buffer);
-    // TODO(dmosc): Figure out how to call WebGL render method to repaint graphics.
+    render(buffer);
   }, 1000); // Render velocity.
+});
+
+document.getElementById("audio-player").addEventListener("pause", function () {
+  clearInterval(audioBufferIntervalId);
 });
 
 document.getElementById("audio-player").addEventListener("ended", function () {
