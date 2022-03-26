@@ -8,12 +8,11 @@ if (!gl) {
 const render = (audioBuffer) => {
   // Tell WebGL how to convert from clip space to pixels
   gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
-
-  // Clear the canvas
-  gl.clearColor(0.25, 0.8, 0.6, 1);
-  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-
-  console.log(audioBuffer);
+  if (audioBuffer) {
+    // Clear screen with rhythm.
+    gl.clearColor(audioBuffer[0] / 1000, audioBuffer[1] / 1000, audioBuffer[2] / 1000, 1);
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+  }
 }
 
 render();

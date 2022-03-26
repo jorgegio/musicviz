@@ -6,12 +6,14 @@ document.getElementById("audio-file-input").addEventListener("change", async fun
     const audioPlayer = document.getElementById("audio-player");
     audioPlayer.src = URL.createObjectURL(this?.files[0]);
 
-    const audioContext = new AudioContext();
-    analyzer = audioContext.createAnalyser();
-    const track = audioContext.createMediaElementSource(audioPlayer);
+    if (!analyzer) { // Only build analyzing pipeline on first audio upload.
+      const audioContext = new AudioContext();
+      analyzer = audioContext.createAnalyser();
+      const track = audioContext.createMediaElementSource(audioPlayer);
 
-    track.connect(analyzer);
-    analyzer.connect(audioContext.destination);
+      track.connect(analyzer);
+      analyzer.connect(audioContext.destination);
+    }
   } else {
     alert("No fue posible procesar el audio.");
   }
@@ -20,10 +22,10 @@ document.getElementById("audio-file-input").addEventListener("change", async fun
 document.getElementById("audio-player").addEventListener("play", function () {
   audioBufferIntervalId = setInterval(() => {
     const bufferSize = analyzer.frequencyBinCount;
-    const buffer = new Float32Array(bufferSize);
-    analyzer.getFloatTimeDomainData(buffer);
+    const buffer = new Uint8Array(bufferSize);
+    analyzer.getByteFrequencyData(buffer);
     render(buffer);
-  }, 1000); // Render velocity.
+  }, 0); // Render velocity.
 });
 
 document.getElementById("audio-player").addEventListener("pause", function () {
