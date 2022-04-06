@@ -6,8 +6,6 @@ Proyecto de Gráficas Computacionales.
 * Daniel Alejandro David Sanchez, A00824566
 * Oscar Rodríguez, A01229551
 
-https://jorgegiovannetti.github.io/WebGLMusicVisualizer/
-
 ---
 
 ## Descripción de proyecto
