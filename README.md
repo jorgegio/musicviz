@@ -20,6 +20,20 @@ El usuario puede subir archivos de tipo **audio/mpeg**, **audio/wav** para ser p
 genera visualizaciones gráficas reactivas basadas en las secuencias de frecuencias generables con 
 **STFT (Short-Time Fourier Transform)**.
 
+## Instalación
+1. Clona o descarga el repositorio
+```
+git clone https://github.com/JorgeGiovannetti/WebGLMusicVisualizer.git
+```
+2. Instala las dependencias a través de npm:
+```
+npm install
+```
+3. Utiliza el siguiente comando para correrlo en un servidor local:
+```
+npm run dev
+```
+
 ## Recursos relevantes
 * [An introduction to Fourier analysis with applications to music](https://scholarship.claremont.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=1142&context=jhm)
 * [Short-Time Fourier Transform explained](https://www.youtube.com/watch?v=-Yxj3yfvY-4)
