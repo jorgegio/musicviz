@@ -1,38 +1,37 @@
-let audioBufferIntervalId;
 let analyzer;
+let isVisualizerOn = false;
 
-document.getElementById("audio-file-input").addEventListener("change", async function() {
+const audioPlayer = document.getElementById("audio-player");
+
+document.getElementById("audio-file-input").addEventListener("change", async function () {
   if (this?.files.length) {
-    const audioPlayer = document.getElementById("audio-player");
-    audioPlayer.src = URL.createObjectURL(this?.files[0]);
-
-    if (!analyzer) { // Only build analyzing pipeline on first audio upload.
-      const audioContext = new AudioContext();
-      analyzer = audioContext.createAnalyser();
-      const track = audioContext.createMediaElementSource(audioPlayer);
-
-      track.connect(analyzer);
-      analyzer.connect(audioContext.destination);
-    }
+    audioPlayer.src = URL.createObjectURL(this?.files[ 0 ]);
   } else {
     alert("No fue posible procesar el audio.");
   }
 }, false);
 
 document.getElementById("audio-player").addEventListener("play", function () {
-  audioBufferIntervalId = setInterval(() => {
-    const bufferSize = analyzer.frequencyBinCount;
-    const buffer = new Uint8Array(bufferSize);
-    analyzer.getByteFrequencyData(buffer);
-    render(buffer);
-  }, 0); // Render velocity.
+  if (!analyzer) {
+    const audioContext = new AudioContext();
+
+    analyzer = audioContext.createAnalyser();
+
+    const track = audioContext.createMediaElementSource(audioPlayer);
+
+    track.connect(analyzer);
+    analyzer.connect(audioContext.destination);
+  }
+  isVisualizerOn = true;
 });
 
 document.getElementById("audio-player").addEventListener("pause", function () {
-  clearInterval(audioBufferIntervalId);
+  isVisualizerOn = false;
 });
 
 document.getElementById("audio-player").addEventListener("ended", function () {
   URL.revokeObjectURL(this.src);
-  clearInterval(audioBufferIntervalId);
+  isVisualizerOn = false;
 });
+
+export { analyzer, isVisualizerOn };
