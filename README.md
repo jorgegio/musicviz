@@ -21,7 +21,7 @@ genera visualizaciones gráficas reactivas basadas en las secuencias de frecuenc
 **STFT (Short-Time Fourier Transform)**.
 
 ## Instalación
-1. Clona o descarga el repositorio
+1. Clona o descarga el repositorio:
 ```
 git clone https://github.com/JorgeGiovannetti/WebGLMusicVisualizer.git
 ```
