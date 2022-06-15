@@ -1,42 +1,49 @@
 # WebGLMusicVisualizer
 
-Proyecto de Gráficas Computacionales.
+<p align="center">
+    <img src="docs/demo.png"/> 
+    <p align="center">
+        Try out the visualizer
+        <a href="https://jorgegiovannetti.github.io/WebGLMusicVisualizer/">
+            here
+        </a>
+    </p>
+</p>
 
-* Jorge Alexander Giovannetti Pulido, A01283034
-* Daniel Alejandro David Sanchez, A00824566
-* Oscar Rodríguez, A01229551
+## Introduction
 
----
+This is a music visualizer for ambience with procedurally generated graphics that react to the music. This project was developed on WebGL using [three.js](https://threejs.org/).
 
-https://jorgegiovannetti.github.io/WebGLMusicVisualizer/
+The user can upload **audio/mpeg**, **audio/wav** files to be processed and listened to while the application generates graphical visualizations based on the frequency sequences generated with **STFT (Short-Time Fourier Transform)** through the Web Audio API built-in analyzer.
 
-## Descripción de proyecto
-El objetivo del proyecto es desarrollar un visualizador de música con formato de ambientación generada
-con formas reactivas tridimensionales en WebGL. Unos ejemplos de formas reactivas:
+## Usage
 
-* Bolitas rebotando en un espacio delimitado.
-* Persona/animal bailando al ritmo de la música.
-* Soundwave tridimensional reflejando el waveform del audio.
+1. Clone or download the repository:
 
-El usuario puede subir archivos de tipo **audio/mpeg**, **audio/wav** para ser procesados y escuchados mientras la aplicación
-genera visualizaciones gráficas reactivas basadas en las secuencias de frecuencias generables con 
-**STFT (Short-Time Fourier Transform)**.
-
-## Instalación
-1. Clona o descarga el repositorio:
 ```
 git clone https://github.com/JorgeGiovannetti/WebGLMusicVisualizer.git
 ```
-2. Instala las dependencias a través de npm:
+
+2. Install dependencies with npm:
+
 ```
 npm install
 ```
-3. Utiliza el siguiente comando para correrlo en un servidor local:
+
+3. Use the following command to run it locally:
+
 ```
 npm run dev
 ```
 
-## Recursos relevantes
-* [An introduction to Fourier analysis with applications to music](https://scholarship.claremont.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=1142&context=jhm)
-* [Short-Time Fourier Transform explained](https://www.youtube.com/watch?v=-Yxj3yfvY-4)
-* [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+## Other resources
+
+[An introduction to Fourier analysis with applications to music](https://scholarship.claremont.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=1142&context=jhm) \
+[Short-Time Fourier Transform explained](https://www.youtube.com/watch?v=-Yxj3yfvY-4) \
+[Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+
+## Developed by
+
+[Jorge Giovannetti](https://github.com/JorgeGiovannetti) \
+[Daniel David](https://github.com/Danyboyyy) \
+[Oscar Rodríguez](https://github.com/dmosc)
