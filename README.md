@@ -24,13 +24,13 @@ The user can upload **audio/mpeg**, **audio/wav** files to be processed and list
 git clone https://github.com/JorgeGiovannetti/WebGLMusicVisualizer.git
 ```
 
-2. Install dependencies with npm:
+2. Install dependencies:
 
 ```
 npm install
 ```
 
-3. Use the following command to run it locally:
+3. Run it locally:
 
 ```
 npm run dev
