@@ -1,7 +1,7 @@
 # WebGLMusicVisualizer
 
 <p align="center">
-    <a href="href="https://jorgegiovannetti.github.io/WebGLMusicVisualizer/">
+    <a href="https://jorgegiovannetti.github.io/WebGLMusicVisualizer/">
         <img src="docs/demo.png"/>
     </a>
     <p align="center">
