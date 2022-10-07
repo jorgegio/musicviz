@@ -21,7 +21,7 @@ The user can upload **audio/mpeg**, **audio/wav** files to be processed and list
 ## Usage
 
 1. Clone or download the repository:
-
+ 
 ```
 git clone https://github.com/JorgeGiovannetti/WebGLMusicVisualizer.git
 ```
