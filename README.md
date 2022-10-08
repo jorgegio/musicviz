@@ -1,12 +1,12 @@
 # WebGLMusicVisualizer
 
 <p align="center">
-    <a href="https://jorgegiovannetti.github.io/WebGLMusicVisualizer/">
+    <a href="https://musicviz.jorgegio.dev">
         <img src="docs/demo.png"/>
     </a>
     <p align="center">
         Try out the visualizer
-        <a href="https://jorgegiovannetti.github.io/WebGLMusicVisualizer/">
+        <a href="https://musicviz.jorgegio.dev">
             here
         </a>
     </p>
