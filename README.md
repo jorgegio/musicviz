@@ -1,4 +1,4 @@
-# WebGLMusicVisualizer
+# musicviz
 
 <p align="center">
     <a href="https://musicviz.jorgegio.dev">
